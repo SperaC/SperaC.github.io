@@ -13,7 +13,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "https://avatars.githubusercontent.com/u/48117957?v=4",
 
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
@@ -27,7 +27,7 @@ export default hopeTheme({
       Email: "mailto:info@example.com",
       GitHub: "https://example.com",
       VuePressThemeHope: {
-        icon: "https://theme-hope-assets.vuejs.press/logo.svg",
+        icon: "https://avatars.githubusercontent.com/u/48117957?v=4",
         link: "https://theme-hope.vuejs.press",
       },
     },

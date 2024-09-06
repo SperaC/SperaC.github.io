@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 title: 博客主页
-heroImage: https://mister-hope.com/logo.svg
+heroImage: https://avatars.githubusercontent.com/u/48117957?v=4
 heroText: SpearX
 heroFullScreen: true
 tagline: 你可以在这里放置你的口号与标语
@@ -35,7 +35,7 @@ projects:
     desc: 伙伴详细介绍
     link: https://你的伙伴链接
 
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
+  - icon: https://avatars.githubusercontent.com/u/48117957?v=4
     name: 自定义项目
     desc: 自定义详细介绍
     link: https://你的自定义链接

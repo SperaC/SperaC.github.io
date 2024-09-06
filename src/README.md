@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 title: Blog Home
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
+heroImage: https://avatars.githubusercontent.com/u/48117957?v=4
 heroText: The name of your blog
 tagline: You can put your slogan here
 heroFullScreen: true
@@ -33,7 +33,7 @@ projects:
     desc: Detailed description of friend
     link: https://link.to.your.friend
 
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
+  - icon: https://avatars.githubusercontent.com/u/48117957?v=4
     name: custom item
     desc: Detailed description of this custom item
     link: https://link.to.your.friend
