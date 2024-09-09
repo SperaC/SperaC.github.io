@@ -94,7 +94,7 @@ github-pages-deploy-action 用于自动将网站内容部署到 GitHub Pages。
 
 ```yml
 - name: Deploy 🚀
-  uses: JamesIves/github-pages-deploy-action@v4
+  uses: SpearC/github-pages-deploy-action@v4
   with:
     # 需要部署到的分支
     branch: gh-pages
@@ -104,4 +104,4 @@ github-pages-deploy-action 用于自动将网站内容部署到 GitHub Pages。
 
 ## 仓库
 
-<https://github.com/JamesIves/github-pages-deploy-action>
+<https://github.com/SpearC/github-pages-deploy-action>

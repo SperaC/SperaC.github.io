@@ -155,8 +155,8 @@ jobs:
 
       # 第四步，部署
       - name: Deploy
-        # action 配置详见 https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@v4
+        # action 配置详见 https://github.com/SpearC/github-pages-deploy-action
+        uses: SpearC/github-pages-deploy-action@v4
         with:
           # 部署到的分支
           branch: gh-pages
