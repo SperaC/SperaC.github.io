@@ -46,7 +46,3 @@ Recently, I moved it as a teenager’s memory in my blog.
 This is some small prose poems I wrote in Senior 1, originally published in the qzone dairy.
 
 Recently, I moved it as a teenager’s memory in my blog.
-
-:::
-
-- [Details](../../note/poem/README.md)
