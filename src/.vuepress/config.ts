@@ -1,21 +1,34 @@
+import { appendDatePlugin } from "@vuepress/plugin-append-date";
+import type { UserConfig } from "vuepress";
 import { defineUserConfig } from "vuepress";
+import { path } from "vuepress/utils"
 
 import theme from "./theme.js";
-import {oml2dPlugin} from "vuepress-plugin-oh-my-live2d";
-import { path } from "vuepress/utils";
 
-export default defineUserConfig({
-  base: "/",
+export default <UserConfig>defineUserConfig({
+  dest: "dist",
+
+  head: [
+    [
+      "link",
+      {
+        rel: "mask-icon",
+        href: "/assets/safari-pinned-tab.svg",
+        color: "#5c92d1",
+      },
+    ],
+  ],
+
   locales: {
     "/": {
-      lang: "en-US",
-      title: "Blog Demo",
-      description: "A blog demo for vuepress-theme-hope",
-    },
-    "/zh/": {
       lang: "zh-CN",
-      title: "博客演示",
-      description: "vuepress-theme-hope 的博客演示",
+      title: "SperaC",
+      description: "Where there is light, there is hope.",
+    },
+
+    "/en/": {
+      title: "My name is SperaC",
+      description: "SperaC personal blog",
     },
   },
 
@@ -26,31 +39,7 @@ export default defineUserConfig({
       "./components/BlogHero.vue",
     ),
   },
-  // Enable it with pwa
-  // shouldPrefetch: false,
-    plugins: [
-        oml2dPlugin({
-            // 在这里配置选项
-            models: [
-                // {
-                //     path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/Live2D/Senko_Normals/senko.model3.json',
-                //     scale: 0.12,
-                //     position: [-10, 50],
-                //     stageStyle: {
-                //         width: 350
-                //     }
-                // },
-                // {
-                //     "path": "https://model.oml2d.com/cat-black/model.json",
-                //     "scale": 0.15,
-                //     "position": [0, 20],
-                //     "stageStyle": {
-                //         "height": 350
-                //     }
-                // }
-            ]
-        })
+  plugins: [appendDatePlugin()],
 
-        //  ...other plugins
-    ]
+  shouldPrefetch: false,
 });

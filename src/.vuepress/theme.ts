@@ -1,246 +1,252 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { enNavbarConfig, zhNavbarConfig } from "./navbar.js";
+import { enSidebarConfig, zhSidebarConfig } from "./sidebar/index.js";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 
-export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+export default hopeTheme(
+  {
+    hostname: "https://SperaC.github.io",
 
-  author: {
-    name: "SpearX",
-    url: "https://mister-hope.com",
-  },
-
-  iconAssets: "fontawesome-with-brands",
-
-  logo: "https://avatars.githubusercontent.com/u/48117957?v=4",
-
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
-
-  docsDir: "src",
-
-  // darkmode:"switch",
-
-  blog: {
-    medias: {
-      BiliBili: "https://example.com",
-      Email: "mailto:info@example.com",
-      GitHub: "https://example.com",
-      VuePressThemeHope: {
-        icon: "https://avatars.githubusercontent.com/u/48117957?v=4",
-        link: "https://theme-hope.vuejs.press",
-      },
-    },
-  },
-
-  locales: {
-    "/": {
-      // navbar
-      navbar: enNavbar,
-
-      // sidebar
-      sidebar: enSidebar,
-
-      footer: "Default footer",
-
-      displayFooter: true,
-
-      blog: {
-        description: "A FrontEnd programmer",
-        intro: "/intro.html",
-      },
-
-      metaLocales: {
-        editLink: "Edit this page on GitHub",
-      },
+    author: {
+      name: "SperaC",
+      url: "https://SperaC.github.io",
     },
 
-    /**
-     * Chinese locale config
-     */
-    "/zh/": {
-      // navbar
-      navbar: zhNavbar,
+    favicon: "/favicon.ico",
 
-      // sidebar
-      sidebar: zhSidebar,
+    iconAssets: [
+      "//at.alicdn.com/t/font_2410206_vuzkjonf4s9.css",
+      "fontawesome"
+    ],
+      
+    logo: "/logo.svg",
 
-      footer: "默认页脚",
+    repo: "SperaC/SperaC.github.io",
 
-      displayFooter: true,
+    repoDisplay: false,
 
-      blog: {
-        description: "一个后端开发者",
-        intro: "/zh/intro.html",
-      },
+    docsDir: "src",
 
-      // page meta
-      metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
-      },
-    },
-  },
+    locales: {
+      "/": {
+        navbar: zhNavbarConfig,
+        sidebar: zhSidebarConfig,
 
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
-    },
-  },
+        footer:
+          '主题使用 <a href="https://theme-hope.vuejs.press/zh/">VuePress Theme Hope</a> | <a href="https://SperaC.github.io/about/site.html" target="_blank">关于网站</a>',
 
-  // enable it to preview all changes in time
-  // hotReload: true,
+        copyright: "基于 MIT 协议，© 2024-至今 SperaC",
 
-  plugins: {
-    blog: true,
-    searchPro:true,
-    // Install @waline/client before enabling it
-    // Note: This is for testing ONLY!
-    // You MUST generate and use your own comment service in production.
-    comment: {
-      provider: "Giscus",
-      repo:"SperaC/SperaC.github.io",
-      repoId:"R_kgDOMtLrFg",
-      category:"Announcements",
-      categoryId:"DIC_kwDOMtLrFs4CiOBW",
-      /** data-repo="SperaC/SperaC.github.io"
-        data-repo-id="R_kgDOMtLrFg"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOMtLrFs4CiOBW" 
-        */
-    },
-
-    components: {
-      components: ["Badge", "VPCard"],
-    },
-
-    // These features are enabled for demo, only preserve features you need here
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      codetabs: true,
-      component: true,
-      demo: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
-      include: true,
-      mark: true,
-      plantuml: true,
-      spoiler: true,
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
+        blog: {
+          description: "后端开发-攻城狮",
+          intro: "/about/",
+          medias: {
+            GitHub: "https://github.com/SperaC"
           },
         },
-      ],
-      sub: true,
-      sup: true,
-      tabs: true,
-      tasklist: true,
-      vPre: true,
+      },
 
-      // install chart.js before enabling it
-      // chart: true,
+      "/en/": {
+        navbar: enNavbarConfig,
+        sidebar: enSidebarConfig,
 
-      // insert component easily
+        footer:
+          'Theme by <a href="https://theme-hope.vuejs.press">vuepress-theme-hope</a>',
 
-      // install echarts before enabling it
-      // echarts: true,
+        copyright: "MIT Licensed, © 2024-present SperaC",
 
-      // install flowchart.ts before enabling it
-      // flowchart: true,
-
-      // gfm requires mathjax-full to provide tex support
-      // gfm: true,
-
-      // install katex before enabling it
-      // katex: true,
-
-      // install mathjax-full before enabling it
-      // mathjax: true,
-
-      // install mermaid before enabling it
-      // mermaid: true,
-
-      // playground: {
-      //   presets: ["ts", "vue"],
-      // },
-
-      // install reveal.js before enabling it
-      // revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
-
-      // install @vue/repl before enabling it
-      // vuePlayground: true,
-
-      // install sandpack-vue3 before enabling it
-      // sandpack: true,
+        blog: {
+          description:
+            "VuePress project member, front-end developer, studying for a master's degree in theoretical physics",
+          intro: "/en/about/",
+          medias: {
+            GitHub: "https://github.com/SperaC"
+          },
+        },
+      },
     },
 
-    // install @vuepress/plugin-pwa and uncomment these if you want a PWA
-    // pwa: {
-    //   favicon: "/favicon.ico",
-    //   cacheHTML: true,
-    //   cacheImage: true,
-    //   appendBase: true,
-    //   apple: {
-    //     icon: "/assets/icon/apple-icon-152.png",
-    //     statusBarColor: "black",
-    //   },
-    //   msTile: {
-    //     image: "/assets/icon/ms-icon-144.png",
-    //     color: "#ffffff",
-    //   },
-    //   manifest: {
-    //     icons: [
-    //       {
-    //         src: "/assets/icon/chrome-mask-512.png",
-    //         sizes: "512x512",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-mask-192.png",
-    //         sizes: "192x192",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-512.png",
-    //         sizes: "512x512",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-192.png",
-    //         sizes: "192x192",
-    //         type: "image/png",
-    //       },
-    //     ],
-    //     shortcuts: [
-    //       {
-    //         name: "Demo",
-    //         short_name: "Demo",
-    //         url: "/demo/",
-    //         icons: [
-    //           {
-    //             src: "/assets/icon/guide-maskable.png",
-    //             sizes: "192x192",
-    //             purpose: "maskable",
-    //             type: "image/png",
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
-    // },
+    displayFooter: true,
+    copyright: "Copyright © 2024-present SperaC",
+
+    plugins: {
+      blog: {
+        excerptLength: 0,
+      },
+
+      comment: {
+        provider: "Giscus",
+        repo:"SperaC/SperaC.github.io",
+        repoId:"R_kgDOMtLrFg",
+        category:"Announcements",
+        categoryId:"DIC_kwDOMtLrFs4CiOBW",
+      },
+
+      // docsearch: {
+      //   appId: "92EXITUA7H",
+      //   apiKey: "33b44aab931cbbd821d1cf25727c68aa",
+      //   indexName: "SperaC",
+      // },
+      searchPro: {
+        // 索引全部内容
+        indexContent: true,
+        autoSuggestions: true,
+        // 为分类和标签添加索引
+        customFields: [
+          {
+            getter(page: any) {
+              return page.frontmatter.category;
+            },
+            formatter: {
+              '/': '分类：$content',
+              '/en/': 'Category: $content',
+            },
+          },
+          {
+            getter(page: any) {
+              return page.frontmatter.tag;
+            },
+            formatter: {
+              '/': '标签：$content',
+              '/en/': 'Tag: $content',
+            },
+          },
+        ],
+      },
+      feed: {
+        atom: true,
+        json: true,
+        rss: true,
+      },
+
+      mdEnhance: {
+        align: true,
+        codetabs: true,
+        demo: true,
+        figure: true,
+        flowchart: true,
+        footnote: true,
+        imgLazyload: true,
+        imgMark: true,
+        imgSize: true,
+        mathjax: true,
+        mermaid: true,
+        revealJs: true,
+        sub: true,
+        sup: true,
+        vPre: true,
+      },
+
+      pwa: {
+        themeColor: "#5c92d1",
+        cacheHTML: false,
+        maxSize: 3072,
+        apple: {
+          icon: "/assets/icon/apple-touch-icon.png",
+          statusBarColor: "white",
+        },
+        msTile: {
+          image: "/assets/icon/ms-icon-144.png",
+          color: "#ffffff",
+        },
+        manifest: {
+          name: "SperaC 的个人博客",
+          short_name: "SperaC Blog",
+          description: "SperaC 的个人博客",
+          theme_color: "#5c92d1",
+          icons: [
+            {
+              src: "/assets/icon/chrome-192.png",
+              sizes: "192x192",
+              type: "image/png",
+            },
+            {
+              src: "/assets/icon/chrome-512.png",
+              sizes: "512x512",
+              type: "image/png",
+            },
+            {
+              src: "/assets/icon/chrome-mask-192.png",
+              sizes: "192x192",
+              purpose: "maskable",
+              type: "image/png",
+            },
+            {
+              src: "/assets/icon/chrome-mask-512.png",
+              sizes: "512x512",
+              purpose: "maskable",
+              type: "image/png",
+            },
+          ],
+          shortcuts: [
+            {
+              name: "分类",
+              short_name: "分类",
+              icons: [
+                {
+                  src: "/assets/icon/category-maskable.png",
+                  sizes: "192x192",
+                  purpose: "maskable",
+                  type: "image/png",
+                },
+              ],
+              url: "/category/",
+              description: "文章分类分组",
+            },
+            {
+              name: "标签",
+              short_name: "标签",
+              icons: [
+                {
+                  src: "/assets/icon/tag-maskable.png",
+                  sizes: "192x192",
+                  purpose: "maskable",
+                  type: "image/png",
+                },
+              ],
+              url: "/tag/",
+              description: "文章标签分组",
+            },
+            {
+              name: "时间线",
+              short_name: "时间线",
+              icons: [
+                {
+                  src: "/assets/icon/timeline-maskable.png",
+                  sizes: "192x192",
+                  purpose: "maskable",
+                  type: "image/png",
+                },
+              ],
+              url: "/timeline/",
+              description: "时间线文章列表",
+            },
+            {
+              name: "个人介绍",
+              short_name: "个人介绍",
+              icons: [
+                {
+                  src: "/assets/icon/about-maskable.png",
+                  sizes: "192x192",
+                  purpose: "maskable",
+                  type: "image/png",
+                },
+              ],
+              url: "/about/",
+              description: "个人介绍",
+            },
+          ],
+        },
+      },
+
+      shiki: {
+        lineNumbers: 10,
+        langAlias: {
+          conf: "ini",
+        },
+      },
+    },
   },
-}, {custom:true});
+  false,
+);
