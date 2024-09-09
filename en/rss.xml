@@ -6,8 +6,8 @@
     <link>https://SperaC.github.io/en/</link>
     <description>SperaC personal blog</description>
     <language>en-US</language>
-    <pubDate>Mon, 09 Sep 2024 04:45:00 GMT</pubDate>
-    <lastBuildDate>Mon, 09 Sep 2024 04:45:00 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Sep 2024 07:24:37 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Sep 2024 07:24:37 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>MIT Licensed, © 2024-present SperaC</copyright>
@@ -89,9 +89,6 @@
 <p>This is some small prose poems I wrote in Senior 1, originally published in the qzone dairy.</p>
 <p>Recently, I moved it as a teenager’s memory in my blog.</p>
 </div>
-<ul>
-<li><a href="/note/poem/" target="_blank">Details</a></li>
-</ul>
 ]]></content:encoded>
     </item>
     <item>

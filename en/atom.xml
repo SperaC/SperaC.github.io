@@ -5,7 +5,7 @@
   <subtitle>SperaC personal blog</subtitle>
   <icon>https://SperaC.github.io/favicon.ico</icon>
   <rights>MIT Licensed, © 2024-present SperaC</rights>
-  <updated>2024-09-09T04:45:00.057Z</updated>
+  <updated>2024-09-09T07:24:37.253Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://SperaC.github.io/en/atom.xml"/>
   <link rel="alternate" href="https://SperaC.github.io/en/"/>
@@ -66,7 +66,7 @@
     <title type="text">Notes</title>
     <id>https://SperaC.github.io/en/note/</id>
     <link href="https://SperaC.github.io/en/note/"/>
-    <updated>2024-09-09T04:42:05.000Z</updated>
+    <updated>2024-09-09T07:21:07.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">Tips</p>
 <p>Note, all the notes only contains <strong>Chinese</strong> version.</p>
@@ -112,9 +112,6 @@
 <p>This is some small prose poems I wrote in Senior 1, originally published in the qzone dairy.</p>
 <p>Recently, I moved it as a teenager’s memory in my blog.</p>
 </div>
-<ul>
-<li><a href="/note/poem/" target="_blank">Details</a></li>
-</ul>
 ]]></content>
     <published>2022-01-07T00:00:00.000Z</published>
   </entry>
