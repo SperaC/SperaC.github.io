@@ -20,15 +20,6 @@ Later I also wrote some poems to add in, among which "Autumn Thought" has most p
 
 Recently, I moved it as a teenager’s memory in my blog.
 
-:::
-
-- [Autumn Thought](../../note/fall/README.md)
-
-- [Winter Words](../../note/winter/README.md)
-
-- [Spring Poetry](../../note/spring/README.md)
-
-- [Summer Songs](../../note/summer/README.md)
 
 ::: tip
 
