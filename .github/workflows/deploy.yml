@@ -2,7 +2,8 @@ name: Deploy blog
 
 on:
   push:
-    branches:
+    # branches|tags 分支或标签
+    tags:
       - main
 
 jobs:
@@ -32,7 +33,7 @@ jobs:
         run: pnpm run build:vite
 
       - name: Deploy
-        uses: SpearC/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: dist
@@ -47,16 +48,16 @@ jobs:
           ref: gh-pages
           fetch-depth: 0
 
-      # - name: Configuration environment
-      #   run: |
-      #     mkdir -p ~/.ssh/
-      #     echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-      #     chmod 600 ~/.ssh/id_rsa
-      #     ssh-keyscan SperaC.com >> ~/.ssh/known_hosts
-      #     git config --global user.name 'SperaC'
-      #     git config --global user.email 'SperaC@outlook.com'
+      - name: Configuration environment
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan SperaC.com >> ~/.ssh/known_hosts
+          git config --global user.name 'SperaC'
+          git config --global user.email 'SperaC@outlook.com'
 
-      # - name: Deploy
-      #   run: |
-      #     git push -f git@SperaC.com:/www/wwwroot/SperaC gh-pages
-      #     ssh git@SperaC.com "cd /www/wwwroot/SperaC && git reset --hard HEAD"
+      - name: Deploy
+        run: |
+          git push -f git@SperaC.com:/www/wwwroot/SperaC gh-pages
+          ssh git@SperaC.com "cd /www/wwwroot/SperaC && git reset --hard HEAD"
