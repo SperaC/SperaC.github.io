@@ -83,37 +83,37 @@ export default hopeTheme(
         categoryId:"DIC_kwDOMtLrFs4CiOBW",
       },
 
-      // docsearch: {
-      //   appId: "92EXITUA7H",
-      //   apiKey: "33b44aab931cbbd821d1cf25727c68aa",
-      //   indexName: "SperaC",
-      // },
-      searchPro: {
-        // 索引全部内容
-        indexContent: true,
-        autoSuggestions: true,
-        // 为分类和标签添加索引
-        customFields: [
-          {
-            getter(page: any) {
-              return page.frontmatter.category;
-            },
-            formatter: {
-              '/': '分类：$content',
-              '/en/': 'Category: $content',
-            },
-          },
-          {
-            getter(page: any) {
-              return page.frontmatter.tag;
-            },
-            formatter: {
-              '/': '标签：$content',
-              '/en/': 'Tag: $content',
-            },
-          },
-        ],
+      docsearch: {
+        appId: "IJ4SITYJDW",
+        apiKey: "a0f161324df45f55cbabb3bc67cf57e4",
+        indexName: "speracio",
       },
+      // searchPro: {
+      //   // 索引全部内容
+      //   indexContent: true,
+      //   autoSuggestions: true,
+      //   // 为分类和标签添加索引
+      //   customFields: [
+      //     {
+      //       getter(page: any) {
+      //         return page.frontmatter.category;
+      //       },
+      //       formatter: {
+      //         '/': '分类：$content',
+      //         '/en/': 'Category: $content',
+      //       },
+      //     },
+      //     {
+      //       getter(page: any) {
+      //         return page.frontmatter.tag;
+      //       },
+      //       formatter: {
+      //         '/': '标签：$content',
+      //         '/en/': 'Tag: $content',
+      //       },
+      //     },
+      //   ],
+      // },
       feed: {
         atom: true,
         json: true,
